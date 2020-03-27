@@ -1,1 +1,1 @@
-import odoo_mercadopago
+from . import odoo_mercadopago
