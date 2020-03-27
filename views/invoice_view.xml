@@ -9,7 +9,7 @@
                 <button attrs="{'invisible':[('state', '!=', 'open')]}" class="oe_highlight" groups="base.group_user" name="action_invoice_mercadopago" string="Send MercadoPago" type="object"/>
             </button>
             <field name="invoice_payment_ref" position="after">
-                <field attrs="{'invisible':[('mercadopago_url','=','')]}" name="mercadopago_url" widget="url"/>
+                <field attrs="{'invisible':[('mercadopago_url','=',False)],'readonly':True}" name="mercadopago_url" widget="url"/>
             </field>
         </field>
     </record>
