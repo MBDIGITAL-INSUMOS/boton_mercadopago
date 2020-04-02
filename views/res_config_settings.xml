@@ -26,6 +26,26 @@
 										<label class="col-lg-3 o_light_label" for="mercadopago_key" string="Client secret"/>
 										<field name="mercadopago_key"/>
 									</div>
+
+									<div class="row mt16">
+										<span><field name="mercadopago_sandbox"/></span>
+
+										<label class="o_form_label" for="mercadopago_sandbox" string="Is Sandbox"/>
+									</div>
+									<div class="row mt16">
+										<span><field name="mercadopago_invoice_on_post"/></span>
+
+										<label class="o_form_label" for="mercadopago_invoice_on_post" string="Create Preference on post invoice"/>
+									</div>
+									<div class="row">
+										<span><field name="mercadopago_external_reference"/></span>
+
+										<label class="o_form_label" for="mercadopago_external_reference" string="Extenal Reference to"/>
+									</div>
+									<div class="row mt16">
+										<label class="o_form_label" for="mercadopago_journal_id" string="Create Preference on post invoice"/>
+										<field name="mercadopago_journal_id"/>
+									</div>									
 								</div>
 							</div>
 						</div>
