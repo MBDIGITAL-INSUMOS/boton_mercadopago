@@ -1,4 +1,4 @@
-from odoo import models, api, fields, _
+from odoo import models, api, fields
 from mercadopago import mercadopago
 import logging
 
@@ -60,4 +60,4 @@ class AccountPayment(models.Model):
                     payment_id = self.create(payment)
                     payment_id.post()
                     if model != 'res.partner':
-                        self.env[model].search([('id','=',res_id)]).mercadopago_payment_receipt(payment_id,result)
+                        self.env[model].search([('id','=',int(res_id))]).mercadopago_payment_receipt(payment_id,result)
