@@ -8,6 +8,11 @@ class AccountMove(models.Model):
     _mercadopago_partner_field = 'partner_id'
     _mercadopago_amount_field = 'amount_total'
 
+
+    def mercadopago_payment_receipt(self,payment_id,result):
+        for line_id in payment_id.move_line_ids :
+            self.js_assign_outstanding_line( line_id)
+
     def action_post(self):
 
         res = super(AccountMove, self).action_post()

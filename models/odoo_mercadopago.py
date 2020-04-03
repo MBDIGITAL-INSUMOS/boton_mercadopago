@@ -16,6 +16,9 @@ class OdooMercadopago(models.AbstractModel):
     mercadopago_id = fields.Char(
         'MercadoPago Id',
     )
+    
+    def mercadopago_payment_receipt(self,payment_id,result):
+        pass
 
     def mercadopago_payer_dict(self):
         partner_id = self[self._mercadopago_partner_field]
@@ -55,7 +58,7 @@ class OdooMercadopago(models.AbstractModel):
     def mercadopago_create_preference(self):
         # preference api description
         # https://www.mercadopago.com.ar/developers/es/reference/preferences/_checkout_preferences/post/
-        # to-do: back_urls expires
+        # to-do: add suport to back_urls expires
         mercadopago_client = self.env['ir.config_parameter'].get_param(
             'mercadopago_client', default=False)
         mercadopago_key = self.env['ir.config_parameter'].get_param(

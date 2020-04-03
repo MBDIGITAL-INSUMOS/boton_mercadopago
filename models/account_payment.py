@@ -57,6 +57,7 @@ class AccountPayment(models.Model):
                         'amount': result['transaction_amount'],
                         'payment_method_id': self.env.ref('payment.account_payment_method_electronic_in').id
                     }
-                    _logger.info(payment)
                     payment_id = self.create(payment)
                     payment_id.post()
+                    if model != 'res.partner':
+                        self.env[model].search([('id','=',res_id)]).mercadopago_payment_receipt(payment_id,result)
