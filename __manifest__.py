@@ -6,8 +6,11 @@
     'license': 'AGPL-3',
     'summary': '',
 
-    'depends': ['account','base'],
+    'depends': ['account','base','payment'],
     'data': [
+    'data/account_journal.xml',
+    'data/ir_cron.xml',
+    'data/payment_acquirer.xml',
 	'views/invoice_view.xml',
 	'views/invoice_action_data.xml',
     'views/res_config_settings.xml'
